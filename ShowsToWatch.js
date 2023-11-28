@@ -16,7 +16,7 @@ class List {
     addShow(show) {
         this.shows.push(show);
     }
-    deleteShow(show) {
+    deleteShow() {
         this.shows.delete(shows[i]);
     }
     describe() {
