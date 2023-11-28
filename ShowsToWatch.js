@@ -16,7 +16,7 @@ class List {
     addShow(show) {
         this.shows.push(show);
     }
-    delete(show) {
+    deleteShow(show) {
         this.shows.delete(shows[i]);
     }
     describe() {
@@ -98,6 +98,13 @@ class Menu {
     createList() {
         let name = prompt('Name your new list: ');
         this.lists.push(new List(name));
+    }
+    deleteList() {
+        let index = prompt(`Enter index of the list that you wish to delete: `);
+        if (index > -1 && index < this.lists.length) {
+            this.selectedList = this.lists[index];
+            this.lists.delete(this.selectedList);
+        }
     }
 }
 let menu = new Menu();
